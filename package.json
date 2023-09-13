@@ -1,0 +1,71 @@
+{
+  "name": "@sec-ant/wc-progress-bar",
+  "description": "A <progress-bar> web component powered by Lit",
+  "private": false,
+  "version": "0.0.1",
+  "type": "module",
+  "files": [
+    "./dist"
+  ],
+  "exports": {
+    ".": "./dist/index.js",
+    "./pure": "./dist/pure.js",
+    "./side-effects": "./dist/side-effects.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sec-ant/wc-progress-bar.git"
+  },
+  "homepage": "https://github.com/Sec-ant/wc-progress-bar",
+  "bugs": {
+    "url": "https://github.com/Sec-ant/wc-progress-bar/issues",
+    "email": "zzwu@zju.edu.cn"
+  },
+  "keywords": [
+    "web-component",
+    "progress-bar",
+    "lit"
+  ],
+  "author": {
+    "name": "Ze-Zheng Wu"
+  },
+  "license": "MIT",
+  "config": {},
+  "publishConfig": {
+    "provenance": true,
+    "access": "public"
+  },
+  "scripts": {
+    "dev": "vite",
+    "type-check": "tsc --noEmit --emitDeclarationOnly false",
+    "prebuild": "npm run type-check",
+    "build": "vite build",
+    "postbuild": "tsc",
+    "test": "vitest",
+    "test:ui": "vitest --ui",
+    "prepublishOnly": "npm run build",
+    "ncu": "npx npm-check-updates -u",
+    "postncu": "npm i"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^17.7.1",
+    "@commitlint/config-conventional": "^17.7.0",
+    "@semantic-release/git": "^10.0.1",
+    "@typescript-eslint/eslint-plugin": "^6.7.0",
+    "@typescript-eslint/parser": "^6.7.0",
+    "@vitest/browser": "^0.34.4",
+    "@vitest/coverage-istanbul": "^0.34.4",
+    "@vitest/ui": "^0.34.4",
+    "eslint": "^8.49.0",
+    "npm-check-updates": "^16.13.3",
+    "playwright": "^1.37.1",
+    "rollup-plugin-minify-html-literals-v3": "^1.3.3",
+    "semantic-release": "^21.1.1",
+    "typescript": "^5.2.2",
+    "vite": "^4.4.9",
+    "vitest": "^0.34.4"
+  },
+  "dependencies": {
+    "lit": "^2.8.0"
+  }
+}
